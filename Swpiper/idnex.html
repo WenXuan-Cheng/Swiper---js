@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .swiper {
+            position: relative;
+            width: 630px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .arrow-l,
+        .arrow-r {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .arrow-l {
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
+
+        .arrow-r {
+            right: 0;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+        }
+
+
+
+        .swiper ul {
+            position: absolute;
+            width: 550%;
+
+        }
+
+        .swiper ul li {
+            float: left;
+            list-style: none;
+        }
+
+        .swiper .ols {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            list-style: none;
+        }
+
+        .swiper .ols li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: orange !important;
+        }
+
+        ul li a img {
+            width: 630px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper">
+        <a href="#" class="arrow-l">&lt;</a>
+        <a href="#" class="arrow-r">></a>
+        <div class="box">
+            <ul>
+                <li>
+                    <a href="#"><img src="../img/one.png" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../img/two.png" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../img/three.png" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../img/four.jpg" alt="" /></a>
+                </li>
+
+            </ul>
+        </div>
+        <ol class="ols">
+        </ol>
+    </div>
+</body>
+<script src="./swiper.js"></script>
+
+</html>
